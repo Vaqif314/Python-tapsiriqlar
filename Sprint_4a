@@ -1,0 +1,80 @@
+# 1
+def hesabla():
+    try:
+        a = float(input("Birinci rəqəm: "))
+        b = float(input("İkinci rəqəm: "))
+        emel = input("Əməliyyat seçin (+, -, *, /): ")
+        if emel == "+":
+            print("Cavab:", a + b)
+        elif emel == "-":
+            print("Cavab:", a - b)
+        elif emel == "*":
+            print("Cavab:", a * b)
+        elif emel == "/":
+            print("Cavab:", a / b)
+        else:
+            print("Yanlış əməliyyat daxil etmisiniz.")
+    except ZeroDivisionError:
+        print("0-a bölmək olmaz.")
+    except ValueError:
+        print("Zəhmət olmasa rəqəm daxil edin.")
+    except:
+        print("Bilinməyən xəta baş verdi.")
+    finally:
+        print("Hesablama bitdi.")
+
+# 2
+ededler = []
+for i in range(1, 51):
+    if i % 11 == 0:
+        ededler.append(i)
+print(ededler)
+
+# 3
+sozler = ["kitab", "qələm", "defter", "silgi"]
+ilk_herfler = []
+for soz in sozler:
+    ilk_herfler.append(soz[0])
+print(ilk_herfler)
+
+# 4
+seherler = ["Bakı", "Gəncə", "Sumqayıt"]
+kodlar = [12, 22, 18]
+seher_kodlari = {}
+for i in range(len(seherler)):
+    seher_kodlari[seherler[i]] = kodlar[i]
+print(seher_kodlari)
+
+# 5
+def km_to_mil(km):
+    return km * 0.621371
+
+for km in [1, 5, 10, 20, 50]:
+    print(km, "km =", km_to_mil(km), "mil")
+
+# 6
+qiymetler = [100, 200, 300, 400]
+vergi_daxil = []
+for qiymet in qiymetler:
+    vergi_daxil.append(qiymet * 1.18)
+print(vergi_daxil)
+
+# 7
+a = [3, 7, 12]
+b = [2, 4, 6]
+cemler = []
+for i in range(len(a)):
+    cem = (a[i] * 2) + (b[i] * 2)
+    cemler.append(cem)
+print(cemler)
+
+# 8
+from functools import reduce
+qiymetler = [150, 80, 220, 45]
+def min_tap(x, y):
+    if x < y:
+        return x
+    else:
+        return y
+en_kicik = reduce(min_tap, qiymetler)
+print("Ən kiçik qiymət:", en_kicik)
