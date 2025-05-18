@@ -1,0 +1,97 @@
+# 1
+x = 5
+if x > 0:
+    print("müsbət")
+elif x < 0:
+    print("mənfi")
+else:
+    print("sıfır")
+
+# 2
+n = 4
+if n % 2 == 0:
+    print("cüt")
+else:
+    print("tək")
+
+# 3
+a, b, c = 3, 7, 5
+print(max(a, b, c))
+
+# 4
+day = 3
+if day == 1:
+    print("Bazar ertəsi")
+elif day == 2:
+    print("Çərşənbə axşamı")
+elif day == 3:
+    print("Çərşənbə")
+elif day == 4:
+    print("Cümə axşamı")
+elif day == 5:
+    print("Cümə")
+elif day == 6:
+    print("Şənbə")
+elif day == 7:
+    print("Bazar")
+else:
+    print("Yanlış gün")
+
+# 5
+temp = 15
+if temp < 0:
+    print("soyuq")
+elif 0 <= temp <= 20:
+    print("normal")
+else:
+    print("isti")
+
+# 6
+password = "sifrem123"
+if len(password) < 8:
+    print("qısa")
+elif 8 <= len(password) <= 12:
+    print("orta")
+else:
+    print("uzun")
+
+# 7
+x = 15
+if x % 3 == 0 and x % 5 == 0:
+    print("3 və 5")
+elif x % 3 == 0:
+    print("3")
+elif x % 5 == 0:
+    print("5")
+else:
+    print("heç biri")
+
+# 8
+for i in range(0, 21, 2):
+    print(i)
+
+# 9
+s = "Bağda ərik var idi …"
+for char in s:
+    print(char)
+
+# 10
+for i in range(1, 11):
+    if i == 3:
+        continue
+    print(i)
+
+# 11
+i = 1
+while True:
+    if i % 5 == 0:
+        print(i)
+        break
+    i += 1
+
+# 12
+lst = [1, 3, 5, 7, 9]
+for idx, val in enumerate(lst):
+    if val == 5:
+        print(idx)
+        break
